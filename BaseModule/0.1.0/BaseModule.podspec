@@ -96,6 +96,48 @@ Pod::Spec.new do |s|
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
+  # subspec后期处理
+
+  # s.subspec 'Extensions' do |extensions|
+  #     extensions.source_files = 'BaseModule/Classes/Extensions/*.{h,m,swift}'
+  # end
+
+  # s.subspec 'Network' do |network|
+  #     network.source_files = 'BaseModule/Classes/Network/**/*.{h,m,swift}','BaseModule/Classes/Network/*.{h,m,swift}'
+  #     network.dependency 'RxSwift',    '~> 4.4.0'
+  #     network.dependency 'Moya', '~> 11.0'
+  #     network.dependency 'SnapKit', '~> 4.2.0'
+  #     network.dependency 'Unbox'
+  # end
+
+  # s.subspec 'Constants' do |constants|
+  #     constants.source_files = 'BaseModule/Classes/Constants/*.{h,m,swift}'
+  # end
+
+  # s.subspec 'Storage' do |storage|
+  #     storage.source_files = 'BaseModule/Classes/Storage/*.{h,m,swift}'
+  # end
+
+  # s.subspec 'Utils' do |utils|
+  #     utils.source_files = 'BaseModule/Classes/Utils/*.{h,m,swift}'
+  #     utils.dependency 'BaseModule/Extensions'
+  #     utils.dependency 'DZNEmptyDataSet'
+  #     utils.dependency 'SKPhotoBrowser'
+  # end
+
+  # 不知道为什么打不进去
+  # s.subspec 'View' do |view|
+  #     view.source_files = 'BaseModule/Classes/View/*.{h,m,swift}','BaseModule/Classes/View/ActivityIndicatorView/**','BaseModule/Classes/View/MJRefresh/*.{h,m,swift}','BaseModule/Classes/View/MJRefresh/**/*.{h,m,swift}','BaseModule/Classes/View/MJRefresh/**/**/*.{h,m,swift}','BaseModule/Classes/View/MJRefresh/**/**/**/*.{h,m,swift}'
+      
+  #     view.xcconfig = { 'SWIFT_OBJC_BRIDGING_HEADER' => '${POD_ROOT}/BaseModule/BaseModule-Bridge-Header.h' } 
+  #     view.dependency 'BaseModule/Extensions'
+  #     view.dependency 'RxSwift',    '~> 4.4.0'
+  #     view.dependency 'RxCocoa',    '~> 4.4.0'
+  #     view.dependency 'NVActivityIndicatorView'
+  #     view.dependency 'SVProgressHUD'
+  #     view.dependency 'Kingfisher'
+  # end
+
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -141,7 +183,6 @@ Pod::Spec.new do |s|
   s.dependency 'Kingfisher'
   s.dependency 'IGListKit', '~> 3.4.0'
   s.dependency 'SKPhotoBrowser'
-  s.dependency 'SwiftyUserDefaults'
   s.dependency 'Reusable', '~> 4.0.4'
   s.dependency 'RxSwift',    '~> 4.4.0'
   s.dependency 'RxCocoa',    '~> 4.4.0'
@@ -153,6 +194,6 @@ Pod::Spec.new do |s|
   s.dependency 'Then'
   s.dependency 'SVProgressHUD'
   s.dependency 'NVActivityIndicatorView'
-  s.dependency 'DateToolsSwift'
   s.dependency 'CTMediator'
+  s.dependency 'DateToolsSwift'
 end
